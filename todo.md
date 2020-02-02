@@ -1,0 +1,1 @@
+* атомарные операции http://gcc.gnu.org/onlinedocs/gcc-4.1.2/gcc/Atomic-Builtins.html
