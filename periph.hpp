@@ -115,5 +115,3 @@ struct periph {
     }
 };
 
-using clock_enable_t = bool;
-constexpr auto clock_enable = clock_enable_t{true};

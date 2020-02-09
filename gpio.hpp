@@ -10,11 +10,11 @@ struct pin {
 
     enum class mode { input, output, alternate, analog, mask = 0b11 << (n * 2) };
 
-    enum class set_t { mask = 0b1 << n };
-    static constexpr auto set = set_t::mask;
+    enum class set_t { set = 1, mask = 1 << n };
+    static constexpr auto set = set_t::set;
 
-    enum class reset_t { mask = 0b1 << (n + 16) };
-    static constexpr auto reset = reset_t::mask;
+    enum class reset_t { reset = 1, mask = 1 << (n + 16) };
+    static constexpr auto reset = reset_t::reset;
 };
 
 } // namespace stm32f7::gpio {
