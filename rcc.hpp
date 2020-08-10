@@ -28,7 +28,7 @@ enum class ethmaptp  { disable, enable, mask = 1 << 28 }; // Bit 28 ETHMACPTPEN:
 enum class otghs     { disable, enable, mask = 1 << 29 }; // Bit 29 OTGHSEN: USB OTG HS clock enable
 enum class otghsulpi { disable, enable, mask = 1 << 30 }; // Bit 30 OTGHSULPIEN: USB OTG HSULPI clock enable
 
-} // namespace stm32f7::gpio {
+} // namespace stm32f7::rcc {
 
 namespace stm32f7::rcc::registers {
 
@@ -45,7 +45,7 @@ struct ahb1enr {
     >{};
 };
 
-} // namespace stm32f7::gpio::registers
+} // namespace stm32f7::rcc::registers
 
 
 namespace stm32f7 {

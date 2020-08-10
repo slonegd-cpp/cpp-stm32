@@ -87,7 +87,7 @@ template<class meta, class...Registers>
 struct periph {
     static constexpr auto registers = type_pack<Registers...>{};
     
-    // просто в запись в регистр значений, игнорирует то, что там было
+    // запись в регистры значений, стирает те значения, который там были
     template<auto...args>
     static void write() {
         constexpr auto values_for_write = extract(registers, args...);
@@ -105,7 +105,7 @@ struct periph {
         }
     }
 
-    // устанавливает значения в регистры, не трогая остальные (для инициализации)
+    // впервые устанавливает значения в регистры, не трогая остальные (для инициализации)
     template<auto...args>
     static void set() {
         constexpr auto values_for_write = extract(registers, args...);
